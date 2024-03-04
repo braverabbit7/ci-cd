@@ -5,7 +5,7 @@ pipeline {
         stage('First_stage') {
             steps {
                 sh '''
-                    mysql --user=rfamro --host=mysql-rfam-public.ebi.ac.uk --port=4497 --database=Rfam --execute="SELECT * FROM rfamseq LIMIT 2" | column -t > /tmp/first.txt
+                    mysql --user=rfamro --host=mysql-rfam-public.ebi.ac.uk --port=4497 --database=Rfam --execute="SELECT * FROM rfamseq LIMIT 3" | column -t > /tmp/first.txt
                 '''
             }
         }
